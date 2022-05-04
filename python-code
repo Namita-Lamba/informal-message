@@ -1,0 +1,18 @@
+# CHANGE FORMAL MESSAGES INTO INFORMAL
+
+
+def sms_encoding(data):
+    vowel=["a","e","i","o","u","A","E","I","O","U"]
+    new_data=""
+    for i in range(0,len(data)):
+        if(data[i] in vowel):
+            if(i != len(data)-1 and data[i+1]==" "):
+                if(i==0 or data[i-1]==" "):
+                    new_data=new_data+data[i]
+            else:
+                continue
+        else:
+            new_data=new_data+data[i]
+    return new_data                
+data=input(str("Enter your message: "))
+print(sms_encoding(data))
